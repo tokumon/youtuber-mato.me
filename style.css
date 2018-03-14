@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*----------このエリアは削除すると正しく動作しない可能性があります----------
+
+Theme Name:   youtuber-matome
+Theme URI:    http://fit-jp.com/theme/
+Description:  FIT(フィット) が制作するメディア用WordPressTHEME「LION MEDIA」の子テーマ
+Author:       Kota Naito　@FIT(フィット)
+Author URI:   http://fit-jp.com/about/
+Template:     lionmedia
+Version:      1.2
+License:      GNU GENERAL PUBLIC LICENSE
+License URI:  http://www.gnu.org/licenses/gpl.html
+
+----------このエリアは削除すると正しく動作しない可能性があります----------*/
+
+
+/*/////////////////////////////////////////////////
+//下記ユーザーカスタマイズエリア
+/////////////////////////////////////////////////*/
+
+
+.youtube {position:relative;}/* ラッパー */
+.youtube_play:hover {cursor:pointer;}/* サムネイル */
+.youtube_btn {/* YouTubeアイコン */
+/* アイコンの画像とサイズ指定 */
+width: 80px;
+height: 50px;
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+background-image:url(yt_logo_rgb_light.png);
+/* 上下左右中央へ配置 */
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+}
+
+.eyecatch a::after{
+  content: "";
+  display: block;
+  background-position: center;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-image: url(play-button.png);
+}
+.eyecatch span a::after{
+  content: none;
+}
+
+.u-txtShdw {
+    text-shadow: none;
+}
+.rankingBox__img img{
+  height: auto;
+}
+
+.area_vtuber ul{
+
+}
+.area_vtuber ul li{
+  border-top: none;
+  display: inline-block;
+  padding: 0 10px 0 0;
+  margin: 0 0 4px;
+}
+.area_vtuber ul li::before{
+  content: none;
+}
+.area_vtuber ul li:first-letter{
+    font-size: 1.6em;
+    color: #e2044d;
+}
+.borderBox{
+  position: relative;
+}
+.content .borderBox {
+    border: 1px solid #f2b200;
+}
+/*
+.borderBox::before{
+  content: "Voicyを聴く！";
+  position: absolute;
+  left: 0;
+  top: -44px;
+  background: #f1b200;
+  color: #fff;
+  padding: 10px;
+}
+*/
+.borderBox::before {
+  content: "PICK UP!";
+  position: absolute;
+  left: -16px;
+  top: -15px;
+  background: #f1b200;
+  font-size: 14px;
+  color: #fff;
+  padding: 4px 10px;
+  border-bottom: 2px solid #e0a500;
+  transform: rotate(-8deg);
+}
+.content .outline{
+  width: 100%;
+  background: #f6f6f6;
+  border: none;
+}
+.outline__title{
+  font-weight: bold;
+}
+.content .outline__toggle:checked + .outline__switch::before {
+    content: "目次を閉じる";
+}
+.content .outline__switch::before {
+    content: "目次を開く";
+}
+.content table{
+}
+.content table th{
+  text-align: center;
+  background: #bcbc35;
+}
+.content table td{
+  text-align: center;
+}
+.content table td.star{
+  color: #bcbc35;
+}
+.content h3 {
+  font-size: 2rem;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid;
+}
+.content em{
+  border-bottom: 2px solid #f1f124;
+}
+.content .outline__link{
+  font-weight: bold;
+}
+.content .outline__link:hover{
+  color: #e20404 !important;
+}
+
+
+@media (max-width: 768px){
+  .rankListWidget{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .rankListWidget li{
+    width: 48%;
+  }
+  .rankListWidget__item:first-child {
+      padding-top: 20px;
+  }
+}
